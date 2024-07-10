@@ -1,0 +1,19 @@
+:host {
+    display:block;
+  }
+
+  ul {
+    display: flex;
+    padding: 0.5rem;
+  }
+
+  li {
+    font-size: 1rem;
+    margin-right: 0.25rem;
+    list-style-type: none;
+  }
+
+  .active {
+    color: green;
+    font-weight: bold;
+  }
