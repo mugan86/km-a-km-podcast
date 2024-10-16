@@ -17,3 +17,161 @@
     color: green;
     font-weight: bold;
   }
+
+  #principal_logo {
+    max-width: 300px;
+    border-radius: 50%;
+  }
+
+  /* Estilos generales */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sección del podcast */
+.podcast-info {
+  background: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.podcast-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.podcast-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-details {
+  flex: 2;
+}
+
+.podcast-details h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.podcast-details p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.podcast-details .btn-primary {
+  display: inline-block;
+  background: #1DB954; /* Verde de Spotify */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.podcast-details .btn-primary:hover {
+  background: #17a94d;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #1DB954;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+
+.available-on {
+  margin-top: 20px;
+}
+
+.available-on p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.platform-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.platform-icons a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.platform-icons a img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .podcast-image img {
+      width: 200px;
+      margin-bottom: 15px;
+  }
+
+  .btn-primary {
+      width: 100%;
+      text-align: center;
+  }
+
+  .available-on {
+      margin-top: 15px;
+  }
+
+  .platform-icons {
+      gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .podcast-image img {
+      width: 150px;
+  }
+
+  .podcast-details h1 {
+      font-size: 24px;
+  }
+
+  .podcast-details p {
+      font-size: 14px;
+  }
+
+  .platform-icons a img {
+      width: 35px;
+      height: 35px;
+  }
+}

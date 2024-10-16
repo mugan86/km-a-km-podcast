@@ -1,8 +1,21 @@
-<ul>
+<!--<ul>
   <li><a routerLink="/" routerLinkActive="active">Home</a></li>
   <li><a routerLink="/pokemon" routerLinkActive="active">Show Pokemon</a></li>
   <li><a routerLink="/bad" routerLinkActive="active">Bad route</a></li>
-</ul>
+</ul>-->
+
+<header class="header">
+  <div class="container">
+      <!--<img id="principal_logo" src="/km_km_portada.jpg" alt="KM a KM">-->
+      <nav>
+          <ul>
+              <li><a href="#">Spotify</a></li>
+              <li><a href="#">Apple Podcasts</a></li>
+              <li><a href="#">Google Podcasts</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
@@ -11,5 +24,46 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<section class="podcast-info">
+  <div class="container">
+      <div class="podcast-image">
+          <img src="https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_nologo400/42094772/42094772-1727458597009-da5e4f0129167.jpg" alt="KM a KM - Disfrutando del camino">
+      </div>
+      <div class="podcast-details">
+          <h1>KM a KM - Disfrutando del camino</h1>
+          <p><strong>By Anartz Mugika Ledo</strong></p>
+          <p>"Km a Km: Disfrutando del Camino" es un podcast donde comparto mi aventura en el mundo del running. Desde crónicas de carreras hasta lecciones aprendidas, exploro el desafío de correr 100,000 km en 20 años entre muchas otras cosas más que os van a interesar. Acompáñame mientras reflexiono sobre mi trayectoria deportiva, comparto consejos para mantener la motivación y superarse a sí mismo. Este espacio está diseñado para inspirar, motivar y ayudar a corredores de todos los niveles a disfrutar cada paso en su propio camino.</p>
+          <p>Mis progresos en Strava : <a href="https://www.strava.com/athletes/1675787" target="_blank">strava.app.link/V1xjlxa4kNb</a></p>
+          <a href="https://open.spotify.com/show/0fbozcdnh43E7zqkchyQJQ" target="_blank" class="btn-primary">Escuchar en Spotify</a>
+          <div class="available-on">
+            <p>Disponible también en:</p>
+            <div class="platform-icons">
+                <a href="https://music.amazon.com" target="_blank"><img src="https://example.com/path-to-amazon-music-logo.png" alt="Amazon Music"></a>
+                <a href="https://castbox.fm" target="_blank"><img src="https://example.com/path-to-castbox-logo.png" alt="Castbox"></a>
+                <a href="https://pocketcasts.com" target="_blank"><img src="https://example.com/path-to-pocketcasts-logo.png" alt="Pocket Casts"></a>
+                <a href="https://spotify.com" target="_blank"><img src="https://example.com/path-to-spotify-logo.png" alt="Spotify"></a>
+                <a href="https://rss.com" target="_blank"><img src="https://example.com/path-to-rss-logo.png" alt="RSS Feed"></a>
+            </div>
+        </div>
+        <div class="available-on">
+           <p>Redes Sociales:</p>
+           <div class="social-links">
+              <a href="https://instagram.com/tu-cuenta" target="_blank">Instagram</a>
+              <a href="https://youtube.com/tu-canal" target="_blank">YouTube</a>
+          </div>
+        </div>
+       
+          
+      </div>
+  </div>
+</section>
 <router-outlet />
+<footer class="footer">
+  <div class="container">
+      <p>&copy; 2024 KM a KM. Todos los derechos reservados.</p>
+      <div class="social-links">
+          <a href="instagram_link">Instagram</a>
+          <a href="youtube_link">YouTube</a>
+      </div>
+  </div>
+</footer>
