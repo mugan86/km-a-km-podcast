@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FormatTimePipe } from '../../core/pipes/format-time';
 interface Episode {
   title: string;
   description: string;
@@ -14,7 +15,7 @@ interface Episode {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, FormatTimePipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -83,12 +84,5 @@ export class HomeComponent {
   seekAudio(event: any) {
     const time = event.target.value;
     this.currentAudio.currentTime = time;
-  }
-
-  // Método para formatear el tiempo en minutos y segundos
-  formatTime(time: number): string {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 }
