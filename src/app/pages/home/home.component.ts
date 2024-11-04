@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FormatTimePipe } from '../../core/pipes/format-time';
+import { MusicPlayerComponent } from '../../shared/components/music-player/music-player.component';
 interface Episode {
   title: string;
   description: string;
@@ -15,7 +16,7 @@ interface Episode {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, FormatTimePipe],
+  imports: [CommonModule, FormsModule, FormatTimePipe, MusicPlayerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -41,48 +42,14 @@ export class HomeComponent {
   ];
 
   selectedEpisode: any;
-  isPlaying = false;
-  currentAudio = new Audio();
-  currentTime = 0;
-  totalTime = 0;
+  
 
   ngOnInit() {
-    // Escuchar el evento timeupdate para actualizar el tiempo actual
-    this.currentAudio.addEventListener('timeupdate', () => {
-      this.currentTime = this.currentAudio.currentTime;
-    });
-
-    // Escuchar el evento loadedmetadata para obtener la duración total del audio
-    this.currentAudio.addEventListener('loadedmetadata', () => {
-      this.totalTime = this.currentAudio.duration;
-    });
+    
   }
 
   selectEpisode(episode: any) {
     this.selectedEpisode = episode;
-    this.playEpisode(episode.audioUrl);
-  }
-
-  playEpisode(url: string) {
-    if (this.currentAudio.src !== url) {
-      this.currentAudio.src = url;
-      this.currentAudio.load();
-    }
-    this.currentAudio.play();
-    this.isPlaying = true;
-  }
-  
-  togglePlay() {
-    if (this.isPlaying) {
-      this.currentAudio.pause();
-    } else {
-      this.currentAudio.play();
-    }
-    this.isPlaying = !this.isPlaying;
-  }
-
-  seekAudio(event: any) {
-    const time = event.target.value;
-    this.currentAudio.currentTime = time;
+    // this.playEpisode(episode.audioUrl);
   }
 }

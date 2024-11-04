@@ -33,21 +33,7 @@
     <!-- Barra de reproducción al estilo Spotify -->
 
     @if(selectedEpisode) {
-        <div class="player-bar" *ngIf="selectedEpisode">
-            <div class="player-info">
-                <!--<img [src]="selectedEpisode.image" alt="Imagen del episodio">-->
-                <img [src]="'/km_km_portada.jpg'" alt="Imagen del episodio">
-                <div class="episode-details">
-                    <h4>{{ selectedEpisode.title }}</h4>
-                    <p>{{ selectedEpisode.date | date:'dd MMM yyyy' }}</p>
-                </div>
-            </div>
-            <div class="player-controls">
-                <button (click)="togglePlay()">{{ isPlaying ? '❚❚' : '▶' }}</button>
-                <input type="range" min="0" [max]="totalTime" [value]="currentTime" (input)="seekAudio($event)">
-                <span>{{ currentTime | formatTime }}</span> / <span>{{ totalTime | formatTime }}</span>
-            </div>
-        </div>
+        <app-music-player [selectedEpisode]="selectedEpisode"></app-music-player>
     }
 
 </div>
